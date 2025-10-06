@@ -16,19 +16,24 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 👈 ensures it pulls your latest commit
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          cache-dependency-path: package-lock.json  # 👈 this line fixes your error
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build
         run: npm run build --if-present
+
+      - name: List available npm scripts
+        run: npm run  # 👈 shows what scripts GitHub actually sees
 
       - name: Test
         run: npm test
