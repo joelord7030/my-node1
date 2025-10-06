@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ades — DevOps Learner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Ades.Dev</h1>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Welcome 👋</h2>
+        <p>I'm learning DevOps and GitHub Actions — this site is my first automated deployment!</p>
+        <button onclick="scrollToSection('projects')">See Projects</button>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="card">
+          <h3>Node.js + GitHub Actions</h3>
+          <p>Continuous Integration and Deployment pipeline example using GitHub Actions.</p>
+        </div>
+        <div class="card">
+          <h3>Dockerized App</h3>
+          <p>Coming soon — containerized deployment using Docker and Kubernetes!</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <p>📧 Email: <a href="mailto:ades@example.com">ades@example.com</a></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Ades.Dev | Built with ❤️ using Node.js & GitHub Actions</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
